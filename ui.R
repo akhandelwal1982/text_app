@@ -11,7 +11,7 @@ library("RWeka")
 
 shinyUI(fluidPage(
   
-  tags$head(includeScript("google_analytics.js")),
+   tags$head(includeScript("google_analytics.js")),
   
   titlePanel("Basic Text Analysis"),
   
@@ -31,13 +31,13 @@ shinyUI(fluidPage(
     
     numericInput("seg", "Number of Segments", 4),
     
-    #     numericInput("tdmfreq", "Minimum frequency of terms for Topic Model:", 2),
-    #     
-    #     h6(div(textOutput("caption1"),style = "color:Blue")),
-    #     
-    #     h6(div(textOutput("caption2"))),
-    #     
-    #     numericInput("topic", "Number of Topics to fit:", 2),
+#     numericInput("tdmfreq", "Minimum frequency of terms for Topic Model:", 2),
+#     
+#     h6(div(textOutput("caption1"),style = "color:Blue")),
+#     
+#     h6(div(textOutput("caption2"))),
+#     
+#     numericInput("topic", "Number of Topics to fit:", 2),
     
     submitButton(text = "Apply Changes", icon("refresh"))
     
@@ -53,7 +53,7 @@ shinyUI(fluidPage(
                          
                          p("To use this app you need a document corpus in txt file format. Make sure each document is seperated from another document with a new line character.
                            To do basic Text Analysis in your text corpus, click on Browse in left-sidebar panel and upload the txt file. Once the file is uploaded it will do the computations in 
-                           back-end with default inputs and accordingly results will be displayed in various tabs.", align = "justify"),
+                            back-end with default inputs and accordingly results will be displayed in various tabs.", align = "justify"),
                          p("If you wish to change the input, modify the input in left side-bar panel and click on Apply changes. Accordingly results in other tab will be refeshed
                            ", align = "Justify"),
                          h5("Note"),
@@ -84,7 +84,7 @@ shinyUI(fluidPage(
                          plotOutput("pcaplot",height = 600, width = 700),
                          h4("Summary"),
                          verbatimTextOutput("summary")),
-                
+               
                 
                 
                 tabPanel("Segmentation - Word cloud",uiOutput("segplots")),
@@ -102,7 +102,7 @@ shinyUI(fluidPage(
                 tabPanel("Sentiment Score Data",dataTableOutput("table"))
                 #                         
                          )
-    )
+                )
   
 )
 )
